@@ -31,7 +31,7 @@ public class Montre {
         Personne hammel = new Personne("hammel");
         hammel.porteMontre2(m);
         m.avance();
-        System.out.println(m.afficheHeure());
+        //System.out.println(m.afficheHeure());
 
     }
 }
@@ -44,22 +44,21 @@ class Personne{
         this.m = null;
     }
 
-    boolean porteMontre2(Montre m){
-        if(m.p!=null || this.m==null){
-            this.m = m;
-            m.p = this;
-            return true;
-        }
-        else return false;
+    void  porteMontre2(Montre m){
+        if(m.p!=null ){
+        this.m = m;
+        System.out.println("montre ajouter");
+        }else System.out.println("il a deja une montre ");
     }
-    Montre enleveMontre() {
+
+        Montre enleveMontre() {
         Montre m = this.m;
         this.m = null;
         if (m != null) m.p = null;
             return m;
         }
 
-    public  String siMontre(){
+     String siMontre(){
         if (m != null){
             return m.afficheHeure();
         }
