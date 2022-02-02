@@ -51,8 +51,8 @@ class Personne{
         }else System.out.println("il a deja une montre ");
     }
 
-        Montre enleveMontre() {
-        Montre m = this.m;
+        Montre enleveMontre(Montre m) {
+         m = this.m;
         this.m = null;
         if (m != null) m.p = null;
             return m;
