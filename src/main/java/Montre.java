@@ -35,7 +35,16 @@ public class Montre {
 
     }
 }
-
+//code pour ajouter un minuteur à la montre
+public Minuteur{ 
+    long timer = System.currentTimeMillis(); //on récupère le temps d’exécution du programme au lancement du timer
+     int delay = 2000; //on veut attendre 2000 ms
+ 
+while (System.currentTimeMillis() - timer < delay) //tant que le temps écoulé depuis qu'on a initialisé le timer est inférieur au delay
+{
+    System.out.println("continuer"); //le programme s’exécute
+}
+}
 class Personne{
     String nom;
     Montre m;
@@ -71,5 +80,6 @@ class Personne{
      if(this.m != null) return this.m.heure+"h"+this.m.min;
      else return "";
      }
+    
 
 }
